@@ -5,6 +5,9 @@
  */
 package poo.peclprogramaciona;
 
+import java.util.Random;
+import java.util.concurrent.TimeUnit;
+
 /**
  *
  * @author Usuario
@@ -14,11 +17,19 @@ public class Main {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         Campamento campamento = new Campamento();
+        for (int i = 0;i<4;i++){
+            Monitor monitor = new Monitor("M"+i,campamento);
+            monitor.start();
+            
+        }
         for (int i=0;i<50;i++){
             Ninio ninio = new Ninio("N"+i, campamento);
             ninio.start();
+            Random r = new Random();
+            int intervalo = r.nextInt(3) + 1;
+            TimeUnit.SECONDS.sleep(intervalo);
         }
     }
     

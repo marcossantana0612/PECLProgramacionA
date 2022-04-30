@@ -34,7 +34,8 @@ public class Ninio extends Thread {
             campamento.entrada1(this);
         }
         else{
-            campamento.entrada2(this);        }
+            campamento.entrada2(this);        
+        }
         while (contador<15){
             System.out.println("Entrando al while");
             
