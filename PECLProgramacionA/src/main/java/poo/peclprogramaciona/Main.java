@@ -15,7 +15,11 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Campamento campamento = new Campamento();
+        for (int i=0;i<50;i++){
+            Ninio ninio = new Ninio("N"+i, campamento);
+            ninio.start();
+        }
     }
     
 }
