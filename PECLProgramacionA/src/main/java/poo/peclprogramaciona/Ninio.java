@@ -16,7 +16,7 @@ import java.util.logging.Logger;
 
 public class Ninio extends Thread {
     
-    private String id;
+    public String id;
     private Campamento campamento;
     private int contador = 0;
     
@@ -27,7 +27,7 @@ public class Ninio extends Thread {
     }
     @Override
     public void run(){
-        System.out.println("Entrando al run");
+        System.out.println("El ninio " + id + " quiere entrar al campamento");
         Random r = new Random();
         if(r.nextDouble()<0.5)
         {
@@ -37,7 +37,6 @@ public class Ninio extends Thread {
             campamento.entrada2(this);        
         }
         while (contador<15){
-            System.out.println("Entrando al while");
             
             Random actividad = new Random();
             int eleccion = actividad.nextInt(3);
@@ -47,20 +46,21 @@ public class Ninio extends Thread {
                     contador++;
                     break;
                 case 1:
-                    if(campamento.soga(this)){
+                    /*if(campamento.soga(this)){
                         contador+=2;
                         break;
-                    }
+                    }*/
                     contador++;
                     break;
                 case 2:
                     if (contador >=3){
                         campamento.merienda(this);
-                    contador++;
+                        contador++;
                     }
                     break;
              }
             try {
+                System.out.println("El ninio " + id + " sale a descansar");
                 Random espera = new Random();
                 int numEspera = espera.nextInt(3) + 2;
                 TimeUnit.SECONDS.sleep(numEspera);

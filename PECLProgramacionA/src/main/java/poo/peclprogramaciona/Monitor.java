@@ -13,7 +13,7 @@ import java.util.Random;
  */
 public class Monitor extends Thread {
     
-    private String id;
+    public String id;
     private Campamento campamento;
     private int actividad;
     private int contador  = 0;
@@ -27,7 +27,7 @@ public class Monitor extends Thread {
     
     @Override
     public void run(){
-        System.out.println("Entrando al run");
+        System.out.println("Entrando al campamento");
         Random r = new Random();
         if(r.nextDouble()<0.5)
         {
@@ -52,6 +52,7 @@ public class Monitor extends Thread {
                     contador++;
                     break;
             }
+            //System.out.println("El monitor " + id + " ha hecho " + contador + " actividades");
             if (contador >= 10){
                 contador = 0;
                 actividad = campamento.descansar(this, actividad);
