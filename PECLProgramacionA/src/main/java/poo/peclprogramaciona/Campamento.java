@@ -334,20 +334,24 @@ public class Campamento {
             zonaComun.remove(ninio);
             merienda.add(ninio);
             
+            actiMeri.lock();
             String meri = obtenerIDsN(merienda);
             interfaz.actualizarColaMerienda(meri);
             String zonaC = obtenerIDsN(zonaComun);
             interfaz.actualizarZonaComun(zonaC);
+            actiMeri.unlock();
             
             entrarMerienda.acquire();
             
             merienda.remove(ninio);
             merendando.add(ninio);
             
+            actiMeri.lock();
             meri = obtenerIDsN(merienda);
             interfaz.actualizarColaMerienda(meri);
             String ids = obtenerIDsN(merendando);
             interfaz.actualizarMerendando(ids);
+            actiMeri.unlock();
  
             limpios.acquire();
             
@@ -366,10 +370,13 @@ public class Campamento {
             merendando.remove(ninio);
             zonaComun.add(ninio);
             
+            actiMeri.lock();
             ids = obtenerIDsN(merendando);
             interfaz.actualizarMerendando(ids);
             zonaC = obtenerIDsN(zonaComun);
             interfaz.actualizarZonaComun(zonaC);
+            actiMeri.unlock();
+            
             entrarMerienda.release();
             
         } catch (InterruptedException e){}
