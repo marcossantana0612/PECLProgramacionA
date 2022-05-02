@@ -59,6 +59,13 @@ public class InterfazCampamento extends javax.swing.JFrame {
     public void actualizarLimpios (int i){
         jTextLimpios.setText(Integer.toString(i));
     }
+    public void actualizarColaSoga (String ids){
+        jTextColaSoga.setText(ids);
+    }
+    public void actualizarEquipos (String e1, String e2){
+        jTextEquipo1.setText(e1);
+        jTextEquipo2.setText(e2);
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -84,6 +91,8 @@ public class InterfazCampamento extends javax.swing.JFrame {
         jPanel7 = new javax.swing.JPanel();
         jTextColaSoga = new javax.swing.JTextField();
         jTextMonitorSoga = new javax.swing.JTextField();
+        jTextEquipo1 = new javax.swing.JTextField();
+        jTextEquipo2 = new javax.swing.JTextField();
         jPanel3 = new javax.swing.JPanel();
         jTextMonitorZonaC = new javax.swing.JTextField();
         jTextNinioZonaC = new javax.swing.JTextField();
@@ -239,17 +248,26 @@ public class InterfazCampamento extends javax.swing.JFrame {
             }
         });
 
+        jTextEquipo1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextEquipo1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
         jPanel7Layout.setHorizontalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel7Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextColaSoga, javax.swing.GroupLayout.DEFAULT_SIZE, 595, Short.MAX_VALUE)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jTextColaSoga)
                     .addGroup(jPanel7Layout.createSequentialGroup()
                         .addComponent(jTextMonitorSoga, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jTextEquipo1, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jTextEquipo2, javax.swing.GroupLayout.PREFERRED_SIZE, 257, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         jPanel7Layout.setVerticalGroup(
@@ -258,8 +276,11 @@ public class InterfazCampamento extends javax.swing.JFrame {
                 .addGap(26, 26, 26)
                 .addComponent(jTextColaSoga, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jTextMonitorSoga, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(26, Short.MAX_VALUE))
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextMonitorSoga, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextEquipo1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextEquipo2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(26, 26, 26))
         );
 
         jPanel3.setBackground(new java.awt.Color(204, 204, 204));
@@ -311,7 +332,7 @@ public class InterfazCampamento extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
                 .addGap(22, 22, 22)
                 .addComponent(jTextColaMerienda, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel8Layout.createSequentialGroup()
                         .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -404,6 +425,10 @@ public class InterfazCampamento extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextFinalizacionActionPerformed
 
+    private void jTextEquipo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextEquipo1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextEquipo1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -451,6 +476,8 @@ public class InterfazCampamento extends javax.swing.JFrame {
     private javax.swing.JTextField jTextColaMerienda;
     private javax.swing.JTextField jTextColaSoga;
     private javax.swing.JTextField jTextColaTirolina;
+    private javax.swing.JTextField jTextEquipo1;
+    private javax.swing.JTextField jTextEquipo2;
     private javax.swing.JTextField jTextFinalizacion;
     private javax.swing.JTextField jTextLimpios;
     private javax.swing.JTextField jTextMerendando;

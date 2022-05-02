@@ -27,7 +27,7 @@ public class Main {
             
         }
         
-        for (int i=0;i<50;i++){
+        for (int i=0;i<20000;i++){
             Ninio ninio = new Ninio("N"+i, campamento);
             ninio.start();
             Random r = new Random();

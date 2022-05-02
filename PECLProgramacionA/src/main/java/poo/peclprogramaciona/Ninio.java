@@ -46,11 +46,13 @@ public class Ninio extends Thread {
                     contador++;
                     break;
                 case 1:
-                    /*if(campamento.soga(this)){
-                        contador+=2;
-                        break;
-                    }*/
-                    contador++;
+                    if (campamento.entrarSoga()){
+                        if(campamento.soga(this)){
+                            contador+=2;
+                            break;
+                        }
+                        contador++;
+                    }
                     break;
                 case 2:
                     if (contador >=3){
