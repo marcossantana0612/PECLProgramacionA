@@ -1,0 +1,13 @@
+El monitorM0abre la entrada 1. 2022-05-07T16:58:00.885823
+El monitorM0entra por la entrada 1. 2022-05-07T16:58:00.893825300
+El ninioN0entra por la entrada 1. 2022-05-07T16:58:00.903827800
+El ninioN1entra por la entrada 1. 2022-05-07T16:58:00.910829
+El ninioN2entra por la entrada 1. 2022-05-07T16:58:01.856264300
+El monitorM1abre la entrada 2. 2022-05-07T16:58:02.898766400
+El monitorM1entra por la entrada 2. 2022-05-07T16:58:02.903766300
+El monitorM2entra por la entrada 2. 2022-05-07T16:58:02.915770100
+El monitorM3entra por la entrada 2. 2022-05-07T16:58:02.926772900
+El monitorM0ha limpiado un plato. 2022-05-07T16:58:03.901050200
+El ninioN0entra en la tirolina. 2022-05-07T16:58:03.933335500
+El ninioN3entra por la entrada 1. 2022-05-07T16:58:04.873348200
+El ninioN4entra por la entrada 2. 2022-05-07T16:58:06.876965600

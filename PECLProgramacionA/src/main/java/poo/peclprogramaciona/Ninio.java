@@ -27,7 +27,6 @@ public class Ninio extends Thread {
     }
     @Override
     public void run(){
-        System.out.println("El ninio " + id + " quiere entrar al campamento");
         Random r = new Random();
         if(r.nextDouble()<0.5)
         {
@@ -62,7 +61,6 @@ public class Ninio extends Thread {
                     break;
              }
             try {
-                System.out.println("El ninio " + id + " sale a descansar");
                 Random espera = new Random();
                 int numEspera = espera.nextInt(3) + 2;
                 TimeUnit.SECONDS.sleep(numEspera);

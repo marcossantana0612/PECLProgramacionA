@@ -25,27 +25,30 @@ import java.util.concurrent.locks.ReentrantLock;
 public class Campamento {
 
     InterfazCampamento interfaz;
+    Logs logs = new Logs();
 
     public Campamento(InterfazCampamento interfaz) {
         this.interfaz = interfaz;
         interfaz.setVisible(true);
+        logs.resetearDatos();
+        
     }
 
-    private ArrayList<Ninio> entrada1 = new ArrayList<>();
-    private ArrayList<Ninio> entrada2 = new ArrayList<>();
+    private final ArrayList<Ninio> entrada1 = new ArrayList<>();
+    private final ArrayList<Ninio> entrada2 = new ArrayList<>();
 
-    private ArrayList<Ninio> tirolina = new ArrayList<>();
-    private ArrayList<Ninio> soga = new ArrayList<>();
-    private ArrayList<Ninio> equipo1 = new ArrayList<>();
-    private ArrayList<Ninio> equipo2 = new ArrayList<>();
-    private ArrayList<Ninio> merienda = new ArrayList<>();
-    private ArrayList<Ninio> merendando = new ArrayList<>();
-    private ArrayList<Ninio> zonaComun = new ArrayList<>();
+    private final ArrayList<Ninio> tirolina = new ArrayList<>();
+    private final ArrayList<Ninio> soga = new ArrayList<>();
+    private final ArrayList<Ninio> equipo1 = new ArrayList<>();
+    private final ArrayList<Ninio> equipo2 = new ArrayList<>();
+    private final ArrayList<Ninio> merienda = new ArrayList<>();
+    private final ArrayList<Ninio> merendando = new ArrayList<>();
+    private final ArrayList<Ninio> zonaComun = new ArrayList<>();
 
-    private ArrayList<Monitor> zonaComunM = new ArrayList<>();
-    private ArrayList<Monitor> tirolinaM = new ArrayList<>();
-    private ArrayList<Monitor> sogaM = new ArrayList<>();
-    private ArrayList<Monitor> meriendaM = new ArrayList<>();
+    private final ArrayList<Monitor> zonaComunM = new ArrayList<>();
+    private final ArrayList<Monitor> tirolinaM = new ArrayList<>();
+    private final ArrayList<Monitor> sogaM = new ArrayList<>();
+    private final ArrayList<Monitor> meriendaM = new ArrayList<>();
 
     private final int capacidad = 50;
     private int alternancia = 0;
@@ -60,7 +63,6 @@ public class Campamento {
     Lock entradas = new ReentrantLock();
     Lock entradasM = new ReentrantLock();
     Lock actiMeri = new ReentrantLock();
-    Lock actiSoga = new ReentrantLock();
 
     Condition e1 = entradas.newCondition();
     Condition e2 = entradas.newCondition();
@@ -82,27 +84,31 @@ public class Campamento {
     Semaphore entrarMerienda = new Semaphore(20);
 
     public String obtenerIDsM(ArrayList<Monitor> array) {
+        lock.lock();
         String IDs = "";
         if (!array.isEmpty()) {
             for (int i = 0; i < array.size(); i++) {
                 IDs = IDs + array.get(i).id + ", ";
             }
         }
+        lock.unlock();
         return IDs;
     }
 
     public String obtenerIDsN(ArrayList<Ninio> array) {
+        lock.lock();
         String IDs = "";
         if (!array.isEmpty()) {
             for (int i = 0; i < array.size(); i++) {
                 IDs = IDs + array.get(i).id + ", ";
             }
         }
+        lock.unlock();
         return IDs;
     }
 
     public int asignarMonitor(Monitor monitor) {
-        lock.lock();
+        entradasM.lock();
         int zonaAsignar = 0;
         try {
             zonaComunM.remove(monitor);
@@ -122,7 +128,7 @@ public class Campamento {
             String monitoresTirolina = obtenerIDsM(tirolinaM);
             String monitoresZonaC = obtenerIDsM(zonaComunM);
             interfaz.actualizarMonitores(monitoresMerienda, monitoresSoga, monitoresTirolina, monitoresZonaC);
-            lock.unlock();
+            entradasM.unlock();
         }
         return zonaAsignar;
     }
@@ -135,13 +141,13 @@ public class Campamento {
                 int tiempoAbrir = r.nextInt(2) + 1;
                 TimeUnit.SECONDS.sleep(tiempoAbrir);
                 abierta1 = true;
-                System.out.println("El monitor " + monitor.id + " ha abierto la puerta 1");
+                logs.guardarDatoM(monitor, 3);
                 if (entrada1.size() > 0) {
                     semP1.release();
                 }
             }
             zonaComunM.add(monitor);
-            System.out.println("El monitor " + monitor.id + " ha entrado por la puerta 1");
+            logs.guardarDatoM(monitor, 1);
         } catch (InterruptedException e) {
         } finally {
             entradasM.unlock();
@@ -156,13 +162,13 @@ public class Campamento {
                 int tiempoAbrir = r.nextInt(2) + 1;
                 TimeUnit.SECONDS.sleep(tiempoAbrir);
                 abierta2 = true;
-                System.out.println("El monitor " + monitor.id + " ha abierto la puerta 2");
+                logs.guardarDatoM(monitor, 4);
                 if (entrada2.size() > 0) {
                     semP2.release();
                 }
             }
             zonaComunM.add(monitor);
-            System.out.println("El monitor " + monitor.id + " ha entrado por la puerta 2");
+            logs.guardarDatoM(monitor, 2);
         } catch (InterruptedException e) {
         } finally {
             entradasM.unlock();
@@ -196,7 +202,7 @@ public class Campamento {
             } else {
                 interfaz.actualizarPuerta1("");
             }
-            System.out.println("El ninio " + ninio.id + " ha entrado por la puerta 1");
+            logs.guardarDatoN(ninio, 1);
         } catch (InterruptedException e) {
         } finally {
             entradas.unlock();
@@ -226,7 +232,7 @@ public class Campamento {
             zonaComun.add(ninio);
             String zonaC = obtenerIDsN(zonaComun);
             interfaz.actualizarZonaComun(zonaC);
-            System.out.println("El ninio " + ninio.id + " ha entrado por la puerta 2");
+           logs.guardarDatoN(ninio, 2);
         } catch (InterruptedException e) {
         } finally {
             entradas.unlock();
@@ -256,7 +262,7 @@ public class Campamento {
                 }
             }
         } finally {
-            System.out.println("El ninio " + ninio.id + " sale del campamento");
+            logs.guardarDatoN(ninio, 11);
             entradas.unlock();
         }
     }
@@ -273,7 +279,6 @@ public class Campamento {
 
             actiTiro.acquire();
 
-            System.out.println("El ninio " + ninio.id + " entra a la tirolina");
 
             tirolina.remove(ninio);
             barreraTirolina.await();
@@ -291,19 +296,20 @@ public class Campamento {
             interfaz.actualizarPreparacion("");
             interfaz.actualizarTirolina(ninio.id);
 
-            System.out.println("El ninio " + ninio.id + " se tira por la tirolina");
+            logs.guardarDatoN(ninio, 6);
             TimeUnit.SECONDS.sleep(3);
 
             interfaz.actualizarTirolina("");
             interfaz.actualizarFinalizacion(ninio.id);
 
-            System.out.println("El ninio " + ninio.id + " se baja por la tirolina");
             TimeUnit.MILLISECONDS.sleep(500);
 
             interfaz.actualizarFinalizacion("");
             zonaComun.add(ninio);
             zonaC = obtenerIDsN(zonaComun);
             interfaz.actualizarZonaComun(zonaC);
+            
+            logs.guardarDatoN(ninio, 0);
 
             entrarTirolina.release();
             actiTiro.release();
@@ -314,7 +320,6 @@ public class Campamento {
         try {
             barreraTirolina.await();
 
-            System.out.println("El monitor " + monitor.id + " prepara la tirolina");
             TimeUnit.SECONDS.sleep(1);
 
             semaforoTirolina.release();
@@ -335,18 +340,19 @@ public class Campamento {
             zonaComun.remove(ninio);
             soga.add(ninio);
 
-            actiSoga.lock();
             String ids = obtenerIDsN(soga);
             interfaz.actualizarColaSoga(ids);
             String zonaC = obtenerIDsN(zonaComun);
             interfaz.actualizarZonaComun(zonaC);
-            actiSoga.unlock();
+
 
             barreraSoga.await();
             
             esperarGrupo.release();
 
             semaforoSoga.acquire();
+            
+            logs.guardarDatoN(ninio, 7);
 
             TimeUnit.SECONDS.sleep(7);
 
@@ -355,27 +361,31 @@ public class Campamento {
             if (ganador && equipo1.contains(ninio)) {
                 heGanado = true;
                 equipo1.remove(ninio);
+                logs.guardarDatoN(ninio, 8);
             } else if (!ganador && equipo1.contains(ninio)) {
                 heGanado = false;
                 equipo1.remove(ninio);
+                logs.guardarDatoN(ninio, 9);
             } else if (ganador && equipo2.contains(ninio)) {
                 heGanado = false;
                 equipo2.remove(ninio);
+                logs.guardarDatoN(ninio, 9);
             } else {
                 heGanado = true;
                 equipo2.remove(ninio);
+                logs.guardarDatoN(ninio, 8);
             }
 
             soga.remove(ninio);
             zonaComun.add(ninio);
+            
+            logs.guardarDatoN(ninio, 0);
 
-            actiSoga.lock();
             interfaz.actualizarEquipos("", "");
             ids = obtenerIDsN(soga);
             interfaz.actualizarColaSoga(ids);
             zonaC = obtenerIDsN(zonaComun);
             interfaz.actualizarZonaComun(zonaC);
-            actiSoga.unlock();
 
         } catch (InterruptedException | BrokenBarrierException e) {
         }
@@ -389,16 +399,7 @@ public class Campamento {
             sogaLibre = false;
             List<Ninio> listatemp1;
             List<Ninio> listatemp2;
-            /*if (r.nextDouble() < 0.5 && equipo1.size() < 5){
-                    Ninio n = soga.remove(i);
-                    equipo1.add(n);
-                } else if (equipo2.size() < 5){
-                    Ninio n = soga.remove(i);
-                    equipo2.add(n);
-                } else {
-                    Ninio n = soga.remove(i);
-                    equipo1.add(n);
-                }*/
+
             listatemp1 = soga.subList(0, 5);
             listatemp2 = soga.subList(5, 10);
             equipo1.addAll(listatemp1);
@@ -426,48 +427,42 @@ public class Campamento {
             zonaComun.remove(ninio);
             merienda.add(ninio);
 
-            actiMeri.lock();
             String meri = obtenerIDsN(merienda);
             interfaz.actualizarColaMerienda(meri);
             String zonaC = obtenerIDsN(zonaComun);
             interfaz.actualizarZonaComun(zonaC);
-            actiMeri.unlock();
 
             entrarMerienda.acquire();
 
             merienda.remove(ninio);
             merendando.add(ninio);
 
-            actiMeri.lock();
             meri = obtenerIDsN(merienda);
             interfaz.actualizarColaMerienda(meri);
             String ids = obtenerIDsN(merendando);
             interfaz.actualizarMerendando(ids);
-            actiMeri.unlock();
 
             limpios.acquire();
 
-            actiMeri.lock();
             interfaz.actualizarLimpios(limpios.availablePermits());
-            actiMeri.unlock();
+            
+            logs.guardarDatoN(ninio, 10);
 
             TimeUnit.SECONDS.sleep(7);
 
             sucios.release();
 
-            actiMeri.lock();
             interfaz.actualizarSucios(sucios.availablePermits());
-            actiMeri.unlock();
 
             merendando.remove(ninio);
             zonaComun.add(ninio);
 
-            actiMeri.lock();
+            logs.guardarDatoN(ninio, 0);
+            
             ids = obtenerIDsN(merendando);
             interfaz.actualizarMerendando(ids);
             zonaC = obtenerIDsN(zonaComun);
             interfaz.actualizarZonaComun(zonaC);
-            actiMeri.unlock();
 
             entrarMerienda.release();
 
@@ -479,13 +474,15 @@ public class Campamento {
         try {
 
             sucios.acquire();
-            System.out.println("PILLO PLATO");
+
 
             actiMeri.lock();
             interfaz.actualizarSucios(sucios.availablePermits());
             actiMeri.unlock();
 
             TimeUnit.SECONDS.sleep(r.nextInt(3) + 3);
+            
+            logs.guardarDatoM(monitor, 5);
 
             limpios.release();
 
@@ -497,8 +494,8 @@ public class Campamento {
     }
 
     public int descansar(Monitor monitor, int actividad) {
-        lock.lock();
-        System.out.println("El monitor " + monitor.id + " empieza su descanso");
+        entradasM.lock();
+        logs.guardarDatoM(monitor, 0);
         int nuevaZona = 0;
         try {
             switch (actividad) {
@@ -520,10 +517,10 @@ public class Campamento {
             interfaz.actualizarMonitores(monitoresMerienda, monitoresSoga, monitoresTirolina, monitoresZonaC);
             TimeUnit.SECONDS.sleep(r.nextInt(2) + 1);
             nuevaZona = asignarMonitor(monitor);
-            System.out.println("El monitor " + monitor.id + " termina su descanso");
+
         } catch (InterruptedException e) {
         } finally {
-            lock.unlock();
+            entradasM.unlock();
         }
         return nuevaZona;
     }
