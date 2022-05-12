@@ -5,7 +5,6 @@
  */
 package Parte2;
 
-import Parte1.*;
 import java.util.Random;
 
 /**
@@ -16,12 +15,14 @@ public class Monitor extends Thread {
     
     public String id;
     private Campamento campamento;
+    private Parar paro;
     private int actividad;
     private int contador  = 0;
 
-    public Monitor(String id, Campamento campamento) {
+    public Monitor(String id, Campamento campamento, Parar paro) {
         this.id = id;
         this.campamento = campamento;
+        this.paro = paro;
     }
 
     
@@ -29,6 +30,7 @@ public class Monitor extends Thread {
     @Override
     public void run(){
         Random r = new Random();
+        paro.mirar();
         if(r.nextDouble()<0.5)
         {
             campamento.entrada1(this);
@@ -38,6 +40,7 @@ public class Monitor extends Thread {
         }
         actividad = campamento.asignarMonitor(this);
         while(true){
+            paro.mirar();
             switch (actividad) {
                 case 0:
                     campamento.prepararMerienda(this);
@@ -55,6 +58,7 @@ public class Monitor extends Thread {
             if (contador >= 10){
                 contador = 0;
                 actividad = campamento.descansar(this, actividad);
+                paro.mirar();
             }
         }
     }

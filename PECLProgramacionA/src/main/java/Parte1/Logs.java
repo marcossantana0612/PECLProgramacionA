@@ -32,7 +32,7 @@ import java.util.concurrent.locks.ReentrantLock;
     11-> Sale del campamento
 */
 public class Logs {
-    String archivo = "evolucionCampamento.txt";
+    String archivo = "evolucionCampamentoP1.txt";
     Lock lock = new ReentrantLock();
     
     public void resetearDatos(){

@@ -5,7 +5,7 @@
  */
 package Parte2;
 
-import InterfazP1.InterfazCampamento;
+import InterfazP2.InterfazCampamento;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -23,6 +23,8 @@ import java.util.concurrent.locks.ReentrantLock;
  */
 public class Campamento {
 
+   
+
     InterfazCampamento interfaz;
     Logs logs = new Logs();
 
@@ -31,6 +33,9 @@ public class Campamento {
         interfaz.setVisible(true);
         logs.resetearDatos();
         
+    }
+     public int getContadorTiro() {
+        return contadorTiro;
     }
 
     public ArrayList<Ninio> getTirolina() {
@@ -120,6 +125,7 @@ public class Campamento {
 
     private final int capacidad = 50;
     private int alternancia = 0;
+    private int contadorTiro = 0;
     private boolean abierta1 = false;
     private boolean abierta2 = false;
     private boolean sogaLibre = true;
@@ -376,6 +382,8 @@ public class Campamento {
             zonaComun.add(ninio);
             zonaC = obtenerIDsN(zonaComun);
             interfaz.actualizarZonaComun(zonaC);
+            
+            contadorTiro++;
             
             logs.guardarDatoN(ninio, 0);
 

@@ -3,10 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Interfaz;
+package InterfazP2;
 
-import java.util.ArrayList;
-import poo.peclprogramaciona.Monitor;
+import Parte2.Parar;
+import Parte2.CreadorDeHilos;
+
 
 /**
  *
@@ -17,8 +18,11 @@ public class InterfazCampamento extends javax.swing.JFrame {
     /**
      * Creates new form InterfazCampamento
      */
+    private static Parar paro = new Parar();
     public InterfazCampamento() {
         initComponents();
+        
+        
     }
     public void actualizarMonitores (String merienda, String soga, String tirolina, String zonaComun){
         jTextMonitorMerienda.setText(merienda);
@@ -102,6 +106,7 @@ public class InterfazCampamento extends javax.swing.JFrame {
         jTextColaMerienda = new javax.swing.JTextField();
         jTextLimpios = new javax.swing.JTextField();
         jTextSucios = new javax.swing.JTextField();
+        jButtonParar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -276,10 +281,11 @@ public class InterfazCampamento extends javax.swing.JFrame {
                 .addGap(26, 26, 26)
                 .addComponent(jTextColaSoga, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextMonitorSoga, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextEquipo1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextEquipo2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jTextEquipo2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jTextMonitorSoga, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTextEquipo1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(26, 26, 26))
         );
 
@@ -308,6 +314,13 @@ public class InterfazCampamento extends javax.swing.JFrame {
 
         jPanel8.setBackground(new java.awt.Color(204, 204, 204));
 
+        jButtonParar.setText("Parar");
+        jButtonParar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonPararActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
         jPanel8Layout.setHorizontalGroup(
@@ -326,6 +339,10 @@ public class InterfazCampamento extends javax.swing.JFrame {
                         .addGap(270, 270, 270)
                         .addComponent(jTextMerendando)))
                 .addContainerGap())
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addGap(592, 592, 592)
+                .addComponent(jButtonParar)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -341,7 +358,9 @@ public class InterfazCampamento extends javax.swing.JFrame {
                         .addGap(22, 22, 22)
                         .addComponent(jTextMonitorMerienda, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jTextMerendando, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(38, 38, 38))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButtonParar)
+                .addGap(9, 9, 9))
         );
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -429,6 +448,18 @@ public class InterfazCampamento extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextEquipo1ActionPerformed
 
+    private void jButtonPararActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPararActionPerformed
+        if(jButtonParar.getText().equals("Parar")) {                
+            jButtonParar.setText("Reanudar");
+            paro.cerrar();
+        }
+        else {                          
+            jButtonParar.setText("Parar");
+            paro.abrir();
+
+        }
+    }//GEN-LAST:event_jButtonPararActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -459,12 +490,16 @@ public class InterfazCampamento extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new InterfazCampamento().setVisible(true);
+                InterfazCampamento c = new InterfazCampamento();
+                c.setVisible(true);
+                CreadorDeHilos Creador = new CreadorDeHilos(c,paro);
+                Creador.start();
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButtonParar;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;

@@ -1,0 +1,41 @@
+El monitorM0abre la entrada 1. 2022-05-12T18:01:02.038910700
+El monitorM0entra por la entrada 1. 2022-05-12T18:01:02.040910
+El monitorM1abre la entrada 2. 2022-05-12T18:01:03.052822
+El monitorM1entra por la entrada 2. 2022-05-12T18:01:03.053814300
+El ninioN0entra por la entrada 2. 2022-05-12T18:01:03.054815300
+El monitorM2entra por la entrada 1. 2022-05-12T18:01:03.058814700
+El monitorM3entra por la entrada 1. 2022-05-12T18:01:03.060815700
+El ninioN1entra por la entrada 1. 2022-05-12T18:01:04.023864600
+El ninioN1entra en la tirolina. 2022-05-12T18:01:05.039729400
+El monitorM0ha limpiado un plato. 2022-05-12T18:01:05.054731200
+El ninioN2entra por la entrada 1. 2022-05-12T18:01:07.028833300
+El monitorM1ha limpiado un plato. 2022-05-12T18:01:07.073056800
+El ninioN1sale a descansar. 2022-05-12T18:01:08.551873700
+El ninioN3entra por la entrada 2. 2022-05-12T18:01:09.033264100
+El ninioN3entra en la tirolina. 2022-05-12T18:01:10.049776500
+El monitorM0ha limpiado un plato. 2022-05-12T18:01:10.064797
+El ninioN4entra por la entrada 1. 2022-05-12T18:01:11.043833900
+El monitorM1ha limpiado un plato. 2022-05-12T18:01:12.077790700
+El ninioN5entra por la entrada 1. 2022-05-12T18:01:13.048750700
+El ninioN3sale a descansar. 2022-05-12T18:01:13.578866
+El ninioN1entra en la tirolina. 2022-05-12T18:01:14.593106600
+El monitorM0ha limpiado un plato. 2022-05-12T18:01:15.073132100
+El monitorM1ha limpiado un plato. 2022-05-12T18:01:15.089136600
+El ninioN6entra por la entrada 2. 2022-05-12T18:01:16.069842300
+El ninioN1sale a descansar. 2022-05-12T18:01:18.114743600
+El ninioN7entra por la entrada 1. 2022-05-12T18:01:19.067808600
+El monitorM1ha limpiado un plato. 2022-05-12T18:01:19.096811900
+El ninioN2entra en la tirolina. 2022-05-12T18:01:20.068294800
+El ninioN8entra por la entrada 1. 2022-05-12T18:01:20.070295400
+El monitorM0ha limpiado un plato. 2022-05-12T18:01:20.083297200
+El ninioN9entra por la entrada 1. 2022-05-12T18:01:21.069787300
+El monitorM0ha limpiado un plato. 2022-05-12T18:01:23.092786500
+El monitorM1ha limpiado un plato. 2022-05-12T18:01:23.107723100
+El ninioN2sale a descansar. 2022-05-12T18:01:23.591782600
+El ninioN10entra por la entrada 2. 2022-05-12T18:01:24.080798
+El monitorM0ha limpiado un plato. 2022-05-12T18:01:27.096859600
+El ninioN11entra por la entrada 2. 2022-05-12T18:01:28.033804800
+El monitorM1ha limpiado un plato. 2022-05-12T18:01:28.119722600
+El ninioN2entra en la tirolina. 2022-05-12T18:01:29.042243700
+El ninioN12entra por la entrada 2. 2022-05-12T18:01:30.091607400
+El monitorM1ha limpiado un plato. 2022-05-12T18:01:31.134054800

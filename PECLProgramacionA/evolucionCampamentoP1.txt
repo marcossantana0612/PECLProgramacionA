@@ -1,0 +1,212 @@
+El monitorM0abre la entrada 1. 2022-05-12T17:47:16.947877400
+El monitorM0entra por la entrada 1. 2022-05-12T17:47:16.950878200
+El monitorM2entra por la entrada 1. 2022-05-12T17:47:16.952879400
+El monitorM1abre la entrada 2. 2022-05-12T17:47:17.967638900
+El monitorM1entra por la entrada 2. 2022-05-12T17:47:17.968638900
+El ninioN0entra por la entrada 2. 2022-05-12T17:47:17.970639700
+El monitorM3entra por la entrada 2. 2022-05-12T17:47:17.971640100
+El ninioN1entra por la entrada 2. 2022-05-12T17:47:17.973640400
+El ninioN1entra en la tirolina. 2022-05-12T17:47:18.976747100
+El monitorM2ha limpiado un plato. 2022-05-12T17:47:19.970842600
+El ninioN2entra por la entrada 2. 2022-05-12T17:47:20.934854600
+El monitorM0ha limpiado un plato. 2022-05-12T17:47:20.963859800
+El ninioN1sale a descansar. 2022-05-12T17:47:22.488873300
+El ninioN0entra en la tirolina. 2022-05-12T17:47:23.500982600
+El ninioN3entra por la entrada 2. 2022-05-12T17:47:23.937956300
+El monitorM0ha limpiado un plato. 2022-05-12T17:47:23.968397600
+El monitorM2ha limpiado un plato. 2022-05-12T17:47:23.981399700
+El ninioN4entra por la entrada 2. 2022-05-12T17:47:26.947801700
+El monitorM0ha limpiado un plato. 2022-05-12T17:47:26.975817400
+El ninioN0sale a descansar. 2022-05-12T17:47:27.008816100
+El ninioN5entra por la entrada 2. 2022-05-12T17:47:27.951783700
+El ninioN3entra en la tirolina. 2022-05-12T17:47:28.013798300
+El monitorM2ha limpiado un plato. 2022-05-12T17:47:28.987905500
+El monitorM0ha limpiado un plato. 2022-05-12T17:47:29.986849300
+El ninioN6entra por la entrada 2. 2022-05-12T17:47:30.964927800
+El ninioN3sale a descansar. 2022-05-12T17:47:31.540845500
+El ninioN1entra en la tirolina. 2022-05-12T17:47:32.544812600
+El ninioN7entra por la entrada 2. 2022-05-12T17:47:33.978938800
+El monitorM2ha limpiado un plato. 2022-05-12T17:47:33.992941600
+El monitorM0ha limpiado un plato. 2022-05-12T17:47:33.994942600
+El ninioN8entra por la entrada 1. 2022-05-12T17:47:35.986874400
+El ninioN1sale a descansar. 2022-05-12T17:47:36.063862600
+El monitorM0ha limpiado un plato. 2022-05-12T17:47:37.000795300
+El ninioN5entra en la tirolina. 2022-05-12T17:47:37.078863500
+El ninioN9entra por la entrada 2. 2022-05-12T17:47:37.989832500
+El ninioN10entra por la entrada 1. 2022-05-12T17:47:38.990863200
+El monitorM2ha limpiado un plato. 2022-05-12T17:47:39.004866800
+El ninioN11entra por la entrada 2. 2022-05-12T17:47:40.002866600
+El ninioN5sale a descansar. 2022-05-12T17:47:40.594098100
+El ninioN12entra por la entrada 2. 2022-05-12T17:47:41.000778500
+El ninioN0entra en la tirolina. 2022-05-12T17:47:41.595844
+El monitorM0ha limpiado un plato. 2022-05-12T17:47:42.003811600
+El ninioN13entra por la entrada 1. 2022-05-12T17:47:43.012946700
+El monitorM2ha limpiado un plato. 2022-05-12T17:47:44.018305500
+El ninioN14entra por la entrada 1. 2022-05-12T17:47:45.027811400
+El ninioN0sale a descansar. 2022-05-12T17:47:45.104042700
+El monitorM0ha limpiado un plato. 2022-05-12T17:47:46.011825800
+El ninioN3entra en la tirolina. 2022-05-12T17:47:46.119848
+El monitorM2ha limpiado un plato. 2022-05-12T17:47:47.024557800
+El ninioN15entra por la entrada 2. 2022-05-12T17:47:48.040346300
+El ninioN2entra en la soga. 2022-05-12T17:47:48.043345800
+El ninioN6entra en la soga. 2022-05-12T17:47:48.044345900
+El ninioN7entra en la soga. 2022-05-12T17:47:48.045347100
+El ninioN9entra en la soga. 2022-05-12T17:47:48.047347200
+El ninioN10entra en la soga. 2022-05-12T17:47:48.049347
+El ninioN15entra en la soga. 2022-05-12T17:47:48.050347800
+El ninioN4entra en la soga. 2022-05-12T17:47:48.051347700
+El ninioN12entra en la soga. 2022-05-12T17:47:48.052349200
+El ninioN5entra en la soga. 2022-05-12T17:47:48.053347500
+El ninioN14entra en la soga. 2022-05-12T17:47:48.054348500
+El monitorM0ha limpiado un plato. 2022-05-12T17:47:49.024024700
+El ninioN3sale a descansar. 2022-05-12T17:47:49.637813400
+El ninioN8entra en la tirolina. 2022-05-12T17:47:50.642066400
+El ninioN16entra por la entrada 2. 2022-05-12T17:47:51.048795800
+El monitorM2ha limpiado un plato. 2022-05-12T17:47:52.035987400
+El ninioN17entra por la entrada 2. 2022-05-12T17:47:52.052991800
+El monitorM0ha limpiado un plato. 2022-05-12T17:47:53.035804200
+El monitorM0sale a descansar. 2022-05-12T17:47:53.036787300
+El ninioN18entra por la entrada 2. 2022-05-12T17:47:53.068795100
+El ninioN19entra por la entrada 2. 2022-05-12T17:47:54.070790200
+El ninioN8sale a descansar. 2022-05-12T17:47:54.147674400
+El ninioN14ha ganado la actividad de soga. 2022-05-12T17:47:55.057885200
+El ninioN14sale a descansar. 2022-05-12T17:47:55.058885200
+El ninioN5ha ganado la actividad de soga. 2022-05-12T17:47:55.059885900
+El ninioN12ha ganado la actividad de soga. 2022-05-12T17:47:55.061887700
+El ninioN12sale a descansar. 2022-05-12T17:47:55.061887700
+El ninioN4ha ganado la actividad de soga. 2022-05-12T17:47:55.064888100
+El ninioN4sale a descansar. 2022-05-12T17:47:55.065887300
+El ninioN15ha ganado la actividad de soga. 2022-05-12T17:47:55.066886500
+El ninioN15sale a descansar. 2022-05-12T17:47:55.067888800
+El ninioN10ha perdido la actividad de soga. 2022-05-12T17:47:55.068888400
+El ninioN10sale a descansar. 2022-05-12T17:47:55.069887800
+El ninioN7ha perdido la actividad de soga. 2022-05-12T17:47:55.070888200
+El ninioN7sale a descansar. 2022-05-12T17:47:55.071890700
+El ninioN9ha perdido la actividad de soga. 2022-05-12T17:47:55.073890800
+El ninioN9sale a descansar. 2022-05-12T17:47:55.076891
+El ninioN6ha perdido la actividad de soga. 2022-05-12T17:47:55.078891400
+El ninioN6sale a descansar. 2022-05-12T17:47:55.079892500
+El ninioN2ha perdido la actividad de soga. 2022-05-12T17:47:55.081892300
+El ninioN2sale a descansar. 2022-05-12T17:47:55.082892600
+El ninioN5sale a descansar. 2022-05-12T17:47:55.083893
+El ninioN20entra por la entrada 1. 2022-05-12T17:47:55.085893100
+El ninioN1entra en la tirolina. 2022-05-12T17:47:55.149538900
+El monitorM2ha limpiado un plato. 2022-05-12T17:47:57.052952600
+El monitorM0ha limpiado un plato. 2022-05-12T17:47:58.058921400
+El ninioN21entra por la entrada 1. 2022-05-12T17:47:58.078907700
+El ninioN1sale a descansar. 2022-05-12T17:47:58.656024900
+El ninioN11entra en la tirolina. 2022-05-12T17:47:59.658942900
+El monitorM2ha limpiado un plato. 2022-05-12T17:48:00.066934200
+El monitorM2sale a descansar. 2022-05-12T17:48:00.067925500
+El ninioN22entra por la entrada 1. 2022-05-12T17:48:01.088658100
+El monitorM0ha limpiado un plato. 2022-05-12T17:48:03.074859500
+El ninioN11sale a descansar. 2022-05-12T17:48:03.170797400
+El monitorM3sale a descansar. 2022-05-12T17:48:03.171798600
+El monitorM2ha limpiado un plato. 2022-05-12T17:48:06.084051500
+El ninioN23entra por la entrada 2. 2022-05-12T17:48:25.846931500
+El ninioN24entra por la entrada 2. 2022-05-12T17:48:25.848931
+El ninioN25entra por la entrada 2. 2022-05-12T17:48:25.850931200
+El ninioN28entra por la entrada 2. 2022-05-12T17:48:25.853934
+El ninioN26entra por la entrada 1. 2022-05-12T17:48:25.854933600
+El ninioN27entra por la entrada 2. 2022-05-12T17:48:25.855933200
+El ninioN29entra por la entrada 2. 2022-05-12T17:48:25.857934600
+El ninioN27entra en la soga. 2022-05-12T17:48:25.858935400
+El ninioN16entra en la soga. 2022-05-12T17:48:25.859934100
+El ninioN8entra en la soga. 2022-05-12T17:48:25.860934200
+El ninioN15entra en la soga. 2022-05-12T17:48:25.861935300
+El ninioN14entra en la soga. 2022-05-12T17:48:25.862934600
+El ninioN22entra en la soga. 2022-05-12T17:48:25.864935600
+El ninioN7entra en la soga. 2022-05-12T17:48:25.865935700
+El ninioN11entra en la soga. 2022-05-12T17:48:25.866936600
+El ninioN25entra en la soga. 2022-05-12T17:48:25.867936100
+El ninioN26entra en la soga. 2022-05-12T17:48:25.868936700
+El ninioN30entra por la entrada 2. 2022-05-12T17:48:25.870937
+El ninioN31entra por la entrada 2. 2022-05-12T17:48:25.871936700
+El ninioN33entra por la entrada 1. 2022-05-12T17:48:25.873938200
+El ninioN32entra por la entrada 2. 2022-05-12T17:48:25.875938200
+El ninioN34entra por la entrada 2. 2022-05-12T17:48:25.877938400
+El ninioN35entra por la entrada 1. 2022-05-12T17:48:25.878939300
+El ninioN36entra por la entrada 1. 2022-05-12T17:48:26.199766400
+El ninioN13entra en la tirolina. 2022-05-12T17:48:26.850880
+El ninioN37entra por la entrada 1. 2022-05-12T17:48:27.214815
+El monitorM0ha limpiado un plato. 2022-05-12T17:48:28.846827
+El ninioN38entra por la entrada 1. 2022-05-12T17:48:30.223876300
+El ninioN13sale a descansar. 2022-05-12T17:48:30.364917900
+El monitorM2ha limpiado un plato. 2022-05-12T17:48:30.851842300
+El ninioN0entra en la tirolina. 2022-05-12T17:48:31.373820600
+El ninioN26ha perdido la actividad de soga. 2022-05-12T17:48:32.884877100
+El ninioN26sale a descansar. 2022-05-12T17:48:32.885860
+El ninioN25ha perdido la actividad de soga. 2022-05-12T17:48:32.885860
+El ninioN25sale a descansar. 2022-05-12T17:48:32.886861600
+El ninioN22ha ganado la actividad de soga. 2022-05-12T17:48:32.887861400
+El ninioN22sale a descansar. 2022-05-12T17:48:32.888861100
+El ninioN14ha ganado la actividad de soga. 2022-05-12T17:48:32.889861500
+El ninioN14sale a descansar. 2022-05-12T17:48:32.889861500
+El ninioN15ha ganado la actividad de soga. 2022-05-12T17:48:32.890861300
+El ninioN15sale a descansar. 2022-05-12T17:48:32.891862500
+El ninioN8ha ganado la actividad de soga. 2022-05-12T17:48:32.892862200
+El ninioN16ha ganado la actividad de soga. 2022-05-12T17:48:32.893863100
+El ninioN16sale a descansar. 2022-05-12T17:48:32.894863100
+El ninioN27ha perdido la actividad de soga. 2022-05-12T17:48:32.894863100
+El ninioN27sale a descansar. 2022-05-12T17:48:32.895863700
+El ninioN7ha perdido la actividad de soga. 2022-05-12T17:48:32.897863800
+El ninioN7sale a descansar. 2022-05-12T17:48:32.898864500
+El ninioN11ha perdido la actividad de soga. 2022-05-12T17:48:32.899864800
+El ninioN11sale a descansar. 2022-05-12T17:48:32.900864500
+El ninioN8sale a descansar. 2022-05-12T17:48:32.901864100
+El ninioN39entra por la entrada 1. 2022-05-12T17:48:34.487910700
+El ninioN40entra por la entrada 1. 2022-05-12T17:48:34.489909800
+El ninioN0sale a descansar. 2022-05-12T17:48:34.891878900
+El ninioN41entra por la entrada 2. 2022-05-12T17:48:35.253866400
+El ninioN14entra a merendar. 2022-05-12T17:48:35.892210600
+El ninioN17entra en la tirolina. 2022-05-12T17:48:35.908197900
+El ninioN42entra por la entrada 1. 2022-05-12T17:48:36.263821600
+El ninioN0entra a merendar. 2022-05-12T17:48:36.907309600
+El ninioN7entra en la soga. 2022-05-12T17:48:36.908309400
+El ninioN24entra en la soga. 2022-05-12T17:48:36.909309800
+El ninioN35entra en la soga. 2022-05-12T17:48:36.909309800
+El ninioN40entra en la soga. 2022-05-12T17:48:36.910309700
+El ninioN23entra en la soga. 2022-05-12T17:48:36.911311400
+El ninioN16entra en la soga. 2022-05-12T17:48:36.912311700
+El ninioN6entra en la soga. 2022-05-12T17:48:36.913311500
+El ninioN25entra en la soga. 2022-05-12T17:48:36.914312
+El ninioN15entra en la soga. 2022-05-12T17:48:36.915310600
+El ninioN8entra en la soga. 2022-05-12T17:48:36.916311400
+El ninioN43entra por la entrada 2. 2022-05-12T17:48:38.277097100
+El ninioN17sale a descansar. 2022-05-12T17:48:39.429223900
+El ninioN18entra en la tirolina. 2022-05-12T17:48:40.430839200
+El ninioN44entra por la entrada 2. 2022-05-12T17:48:42.293964300
+El ninioN45entra por la entrada 2. 2022-05-12T17:48:42.300966700
+El ninioN14sale a descansar. 2022-05-12T17:48:42.894841400
+El ninioN0sale a descansar. 2022-05-12T17:48:43.910401
+El ninioN25ha perdido la actividad de soga. 2022-05-12T17:48:43.924394900
+El ninioN25sale a descansar. 2022-05-12T17:48:43.924394900
+El ninioN23ha ganado la actividad de soga. 2022-05-12T17:48:43.925396100
+El ninioN23sale a descansar. 2022-05-12T17:48:43.928397100
+El ninioN8ha perdido la actividad de soga. 2022-05-12T17:48:43.956402100
+El ninioN8sale a descansar. 2022-05-12T17:48:43.957405300
+El ninioN7ha perdido la actividad de soga. 2022-05-12T17:48:43.959406400
+El ninioN7sale a descansar. 2022-05-12T17:48:43.960404400
+El ninioN6ha perdido la actividad de soga. 2022-05-12T17:48:43.961405300
+El ninioN6sale a descansar. 2022-05-12T17:48:43.962404100
+El ninioN40ha ganado la actividad de soga. 2022-05-12T17:48:43.963404200
+El ninioN40sale a descansar. 2022-05-12T17:48:43.964404900
+El ninioN35ha ganado la actividad de soga. 2022-05-12T17:48:43.970406300
+El ninioN35sale a descansar. 2022-05-12T17:48:43.971406900
+El ninioN16ha ganado la actividad de soga. 2022-05-12T17:48:43.971406900
+El ninioN16sale a descansar. 2022-05-12T17:48:43.972407500
+El ninioN24ha ganado la actividad de soga. 2022-05-12T17:48:43.973407900
+El ninioN24sale a descansar. 2022-05-12T17:48:43.974407900
+El ninioN15ha perdido la actividad de soga. 2022-05-12T17:48:43.977409400
+El ninioN15sale a descansar. 2022-05-12T17:48:43.979408
+El ninioN18sale a descansar. 2022-05-12T17:48:43.981409
+El ninioN3entra en la tirolina. 2022-05-12T17:48:44.985807100
+El ninioN46entra por la entrada 2. 2022-05-12T17:48:45.315160400
+El monitorM0ha limpiado un plato. 2022-05-12T17:48:45.906856600
+El ninioN47entra por la entrada 2. 2022-05-12T17:48:46.314939600
+El monitorM2ha limpiado un plato. 2022-05-12T17:48:47.915818800
+El ninioN3sale a descansar. 2022-05-12T17:48:48.506656400
+El ninioN48entra por la entrada 2. 2022-05-12T17:48:49.322809900
+El ninioN19entra en la tirolina. 2022-05-12T17:48:49.697007900
+El ninioN49entra por la entrada 1. 2022-05-12T17:48:52.481932800
+El ninioN19sale a descansar. 2022-05-12T17:48:53.207610300

@@ -18,16 +18,19 @@ public class Ninio extends Thread {
     
     public String id;
     private Campamento campamento;
+    private Parar paro;
     private int contador = 0;
     
-    public Ninio(String id, Campamento campamento){
+    public Ninio(String id, Campamento campamento, Parar paro){
         this.id = id;
         this.campamento = campamento;
+        this.paro = paro;
 
     }
     @Override
     public void run(){
         Random r = new Random();
+        paro.mirar();
         if(r.nextDouble()<0.5)
         {
             campamento.entrada1(this);
@@ -36,7 +39,7 @@ public class Ninio extends Thread {
             campamento.entrada2(this);        
         }
         while (contador<15){
-            
+            paro.mirar();
             Random actividad = new Random();
             int eleccion = actividad.nextInt(3);
             switch (eleccion) {
@@ -67,6 +70,7 @@ public class Ninio extends Thread {
             } catch (InterruptedException ex) {
                 Logger.getLogger(Ninio.class.getName()).log(Level.SEVERE, null, ex);
             }
+            paro.mirar();
         }
         campamento.salir(this);
         

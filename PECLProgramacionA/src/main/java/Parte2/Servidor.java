@@ -10,8 +10,6 @@ import java.io.DataOutputStream;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  *
@@ -45,7 +43,7 @@ public class Servidor extends Thread {
                         devolver = c.getTirolina().size();
                         break;
                     case "1":
-                        devolver = c.getTirolina().size();
+                        devolver = c.getContadorTiro();
                         break;
                     case "2":
                         devolver = c.getMerendando().size();
