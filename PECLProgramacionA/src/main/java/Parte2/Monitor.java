@@ -34,7 +34,7 @@ public class Monitor extends Thread {
         {
             campamento.entrada1(this);
         }
-        else{                                           //Acceso por la entrada 1
+        else{                                           //Acceso por la entrada 2
             campamento.entrada2(this);        
         }
         actividad = campamento.asignarMonitor(this);    //Asignación de monitor a una actividad
