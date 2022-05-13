@@ -27,7 +27,8 @@ public class Monitor extends Thread {
     }
 
     @Override
-    public void run(){                                  //Método run()
+    //Método run()
+    public void run(){
         Random r = new Random();                        //Valor aleatorio para decidir por que entrada accede el monitor
         paro.mirar();
         if(r.nextDouble()<0.5)                          //Acceso por la entrada 1
