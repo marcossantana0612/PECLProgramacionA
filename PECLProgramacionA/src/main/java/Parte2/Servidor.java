@@ -39,6 +39,8 @@ public class Servidor extends Thread {
                 String mensaje = entrada.readUTF();                         //Recepción de información
                 int devolver = 0;
                 switch (mensaje){
+                    //Casos de petición de información posibles
+                    //Se le asigna a la variable 'devolver' la cantidad solicitada en cada caso
                     case "0":
                         devolver = c.getTirolina().size();
                         break;
