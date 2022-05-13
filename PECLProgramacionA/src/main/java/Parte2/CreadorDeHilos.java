@@ -17,24 +17,28 @@ public class CreadorDeHilos extends Thread {
 
     InterfazCampamento c;
     Parar paro;
-
+    
+    //Constructor
     public CreadorDeHilos(InterfazCampamento c, Parar paro) {
         this.c = c;
         this.paro = paro;
     }
-
+    
+    //Metodo run()
     public void run() {
         try {
             Campamento campamento = new Campamento(c);
             Servidor server = new Servidor(campamento);
             server.start();
 
+            //Asignacion de IDs para los monitores
             for (int i = 0; i < 4; i++) {
                 Monitor monitor = new Monitor("M" + i, campamento, paro);
                 monitor.start();
 
             }
 
+            //Asignacion de IDs para los ninios
             for (int i = 0; i < 20000; i++) {
                 Ninio ninio = new Ninio("N" + i, campamento, paro);
                 ninio.start();
