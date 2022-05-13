@@ -32,11 +32,15 @@ import java.util.concurrent.locks.ReentrantLock;
     10-> Entra a merienda
     11-> Sale del campamento
 */
+
 public class Logs {
-    String archivo = "evolucionCampamentoP2.txt";
+    String archivo = "evolucionCampamentoP2.txt";    //Archivo en el que se guardaran los datos
     Lock lock = new ReentrantLock();
     
     public void resetearDatos(){
+        /*
+        * Resetea el contenido del .txt para que no surgan problemas si habia datos guardados anteriormente
+        */
         try {
             lock.lock();
             PrintWriter out = new PrintWriter(archivo);
@@ -49,6 +53,9 @@ public class Logs {
         }  
     }
     public void guardarDatoN(Ninio n, int acti){
+        /*
+        * Guarda los datos de los ninios
+        */
         try {
             lock.lock();
             try ( PrintWriter out = new PrintWriter(new FileWriter(archivo, true))) {
@@ -95,7 +102,11 @@ public class Logs {
             lock.unlock();
         }
     }
+    
     public void guardarDatoM(Monitor m, int acti){
+        /*
+        * Guarda los datos de los monitores
+        */
         try {
             lock.lock();
             try ( PrintWriter out = new PrintWriter(new FileWriter(archivo, true))) {
