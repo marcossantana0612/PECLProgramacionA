@@ -348,6 +348,9 @@ public class Campamento {
     }
 
     public void salir(Ninio ninio) {
+       /*
+        * Funcion utilizada cuando un ninio ha terminado las 15 actividades y sale del campamento
+        */
         entradas.lock();
         try {
             zonaComun.remove(ninio);                    //Se quita al ninio de la zona comun
