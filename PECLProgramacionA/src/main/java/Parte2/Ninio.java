@@ -15,41 +15,45 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class Ninio extends Thread {
-    
-     public String id;
+    //declaracion de variables
+    public String id;
     private Campamento campamento;
     private Parar paro;
     private int contador = 0;
     
-    
-    
+    //constructir
     public Ninio(String id, Campamento campamento, Parar paro){
         this.id = id;
         this.campamento = campamento;
         this.paro = paro;
 
     }
-
+    //get de la variable 'contador'
     public int getContador() {
         return contador;
     }
     
     @Override
+    //Método run()
     public void run(){
-        Random r = new Random();
+        Random r = new Random();                   
         paro.mirar();
-        if(r.nextDouble()<0.5)
+        if(r.nextDouble()<0.5)                    //Valor aleatorio para decidir por que entrada accede el ninio
         {
-            campamento.entrada1(this);
+            campamento.entrada1(this);            //Acceso por la entrada 1
         }
         else{
-            campamento.entrada2(this);        
+            campamento.entrada2(this);            //Acceso por la entrada 2
         }
-        while (contador<15){
+        while (contador<15){                      //Mientras el ninio lleve menos de 15 actividades:            
             paro.mirar();
-            Random actividad = new Random();
+            Random actividad = new Random();      //Valor aleatorio para la eleccion de actividad
             int eleccion = actividad.nextInt(3);
             switch (eleccion) {
+                /* Switch con todas las actividades posibles
+                *  Cada vez que el ninio termine una actividad su contador aumentara
+                *  En caso de no llevar 3 actividades, no podra acceder a la actividad 'merienda'
+                */
                 case 0:
                     campamento.tirolina(this);
                     contador++;
@@ -71,15 +75,15 @@ public class Ninio extends Thread {
                     break;
              }
             try {
-                Random espera = new Random();
+                Random espera = new Random();              //valor aleatorio para la pausa entre actividades
                 int numEspera = espera.nextInt(3) + 2;
-                TimeUnit.SECONDS.sleep(numEspera);
+                TimeUnit.SECONDS.sleep(numEspera);         //pausa
             } catch (InterruptedException ex) {
                 Logger.getLogger(Ninio.class.getName()).log(Level.SEVERE, null, ex);
             }
             paro.mirar();
         }
-        campamento.salir(this);
+        campamento.salir(this);                            //salida del campamento tras realizar las 15 actividades
         
     }
 
