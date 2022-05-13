@@ -12,33 +12,32 @@ import java.util.Random;
  * @author Usuario
  */
 public class Monitor extends Thread {
-    
+    //Declaración de variables
     public String id;
     private Campamento campamento;
     private Parar paro;
     private int actividad;
     private int contador  = 0;
 
+    //Constructor
     public Monitor(String id, Campamento campamento, Parar paro) {
         this.id = id;
         this.campamento = campamento;
         this.paro = paro;
     }
 
-    
-    
     @Override
     public void run(){
-        Random r = new Random();
+        Random r = new Random();                        //Valor aleatorio para decidir por que entrada accede el monitor
         paro.mirar();
-        if(r.nextDouble()<0.5)
+        if(r.nextDouble()<0.5)                          //Acceso por la entrada 1
         {
             campamento.entrada1(this);
         }
-        else{
+        else{                                           //Acceso por la entrada 2
             campamento.entrada2(this);        
         }
-        actividad = campamento.asignarMonitor(this);
+        actividad = campamento.asignarMonitor(this);    //Asignación de monitor a una actividad
         while(true){
             paro.mirar();
             switch (actividad) {
@@ -55,9 +54,9 @@ public class Monitor extends Thread {
                     contador++;
                     break;
             }
-            if (contador >= 10){
-                contador = 0;
-                actividad = campamento.descansar(this, actividad);
+            if (contador >= 10){                                    //Si el monitor ya lleva 10 actividades:
+                contador = 0;                                       //se reinicia su contador de actividades
+                actividad = campamento.descansar(this, actividad);  //el monitor accede a la zona de descanso
                 paro.mirar();
             }
         }
