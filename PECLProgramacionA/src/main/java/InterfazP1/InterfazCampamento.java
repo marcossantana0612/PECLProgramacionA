@@ -22,10 +22,9 @@ public class InterfazCampamento extends javax.swing.JFrame {
     
     public InterfazCampamento() {
         initComponents();
-        
-        
-        
     }
+    
+    //Metodos para las actualizaciones de interfaz
     public void actualizarMonitores (String merienda, String soga, String tirolina, String zonaComun){
         jTextMonitorMerienda.setText(merienda);
         jTextMonitorSoga.setText(soga);
@@ -451,6 +450,9 @@ public class InterfazCampamento extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextEquipo1ActionPerformed
 
     private void jButtonPararActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPararActionPerformed
+        /*
+        * Cambia de texto del jButtonParar al utilizarlo
+        */
         if(jButtonParar.getText().equals("Parar")) {                
             jButtonParar.setText("Reanudar");
             paro.cerrar();
