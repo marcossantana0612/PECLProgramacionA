@@ -30,13 +30,13 @@ public class Servidor extends Thread {
     
     public void run(){
         try {
-            servidor = new ServerSocket(5000);
+            servidor = new ServerSocket(5000);                              //Creación del servidor
             while (true){
                 System.out.println("Esperando conexion...");
-                conexion = servidor.accept();
-                entrada = new DataInputStream(conexion.getInputStream());
-                salida = new DataOutputStream(conexion.getOutputStream());
-                String mensaje = entrada.readUTF();
+                conexion = servidor.accept();                               //Estableciendo conexión
+                entrada = new DataInputStream(conexion.getInputStream());   //Creación de flujo de entrada
+                salida = new DataOutputStream(conexion.getOutputStream());  //Creación de flujo de salida
+                String mensaje = entrada.readUTF();                         //Recepción de información
                 int devolver = 0;
                 switch (mensaje){
                     case "0":
@@ -61,8 +61,8 @@ public class Servidor extends Thread {
                         devolver = c.getNinio(mensaje);
                         break;
                 }
-                salida.writeInt(devolver);
-                conexion.close();
+                salida.writeInt(devolver);                                  //Envio de información
+                conexion.close();                                           //Cierre de conexión
             }
         } catch (IOException ex) {}
     }
