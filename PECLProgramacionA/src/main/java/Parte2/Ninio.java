@@ -21,7 +21,7 @@ public class Ninio extends Thread {
     private Parar paro;
     private int contador = 0;
     
-    //constructir
+    //constructor
     public Ninio(String id, Campamento campamento, Parar paro){
         this.id = id;
         this.campamento = campamento;
