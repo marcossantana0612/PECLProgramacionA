@@ -19,6 +19,9 @@ public class Parar {
     private Condition parar = cerrojo.newCondition();
 
     public void mirar() {
+        /*
+        * Comprueba si se ha cerrado y realiza un await en la condicion
+        */
         try {
             cerrojo.lock();
             while (cerrado) {
@@ -33,6 +36,9 @@ public class Parar {
     }
     
     public void abrir() {
+        /*
+        * Método para despertar todos los hilos que esten esperando la condicion
+        */
         try {
             cerrojo.lock();
             cerrado = false; //Se cambia la condición por la que otros hilos podrían estar esperando
