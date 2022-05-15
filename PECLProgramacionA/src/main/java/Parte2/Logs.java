@@ -34,8 +34,8 @@ import java.util.concurrent.locks.ReentrantLock;
 */
 
 public class Logs {
-    String archivo = "evolucionCampamentoP2.txt";    //Archivo en el que se guardaran los datos
-    Lock lock = new ReentrantLock();
+    private String archivo = "evolucionCampamentoP2.txt";    //Archivo en el que se guardaran los datos
+    private Lock lock = new ReentrantLock();
     
     public void resetearDatos(){
         /*
@@ -63,31 +63,31 @@ public class Logs {
                 String aEscribir = "";
                 switch(acti){
                     case 0:
-                        aEscribir = "El ninio" + n.id + "sale a descansar. " + LocalDateTime.now();
+                        aEscribir = "El ninio" + n.getIdN() + "sale a descansar. " + LocalDateTime.now();
                         break;
                     case 1:
-                        aEscribir = "El ninio" + n.id + "entra por la entrada 1. " + LocalDateTime.now();
+                        aEscribir = "El ninio" + n.getIdN() + "entra por la entrada 1. " + LocalDateTime.now();
                         break;
                     case 2:
-                        aEscribir = "El ninio" + n.id + "entra por la entrada 2. " + LocalDateTime.now();
+                        aEscribir = "El ninio" + n.getIdN() + "entra por la entrada 2. " + LocalDateTime.now();
                         break;
                     case 6:
-                        aEscribir = "El ninio" + n.id + "entra en la tirolina. " + LocalDateTime.now();
+                        aEscribir = "El ninio" + n.getIdN() + "entra en la tirolina. " + LocalDateTime.now();
                         break;
                     case 7:
-                        aEscribir = "El ninio" + n.id + "entra en la soga. " + LocalDateTime.now();
+                        aEscribir = "El ninio" + n.getIdN() + "entra en la soga. " + LocalDateTime.now();
                         break;
                     case 8:
-                        aEscribir = "El ninio" + n.id + "ha ganado la actividad de soga. " + LocalDateTime.now();
+                        aEscribir = "El ninio" + n.getIdN() + "ha ganado la actividad de soga. " + LocalDateTime.now();
                         break;
                     case 9:
-                        aEscribir = "El ninio" + n.id + "ha perdido la actividad de soga. " + LocalDateTime.now();
+                        aEscribir = "El ninio" + n.getIdN() + "ha perdido la actividad de soga. " + LocalDateTime.now();
                         break;
                     case 10:
-                        aEscribir = "El ninio" + n.id + "entra a merendar. " + LocalDateTime.now();
+                        aEscribir = "El ninio" + n.getIdN() + "entra a merendar. " + LocalDateTime.now();
                         break;
                     case 11:
-                        aEscribir = "El ninio" + n.id + "sale del campamento." + LocalDateTime.now();
+                        aEscribir = "El ninio" + n.getIdN() + "sale del campamento." + LocalDateTime.now();
                         break;
                     default:
                         break;
@@ -113,22 +113,22 @@ public class Logs {
                 String aEscribir = "";
                 switch(acti){
                     case 0:
-                        aEscribir = "El monitor" + m.id + "sale a descansar. " + LocalDateTime.now();
+                        aEscribir = "El monitor" + m.getIdM() + "sale a descansar. " + LocalDateTime.now();
                         break;
                     case 1:
-                        aEscribir = "El monitor" + m.id + "entra por la entrada 1. " + LocalDateTime.now();
+                        aEscribir = "El monitor" + m.getIdM() + "entra por la entrada 1. " + LocalDateTime.now();
                         break;
                     case 2:
-                        aEscribir = "El monitor" + m.id + "entra por la entrada 2. " + LocalDateTime.now();
+                        aEscribir = "El monitor" + m.getIdM() + "entra por la entrada 2. " + LocalDateTime.now();
                         break;
                     case 3:
-                        aEscribir = "El monitor" + m.id + "abre la entrada 1. " + LocalDateTime.now();
+                        aEscribir = "El monitor" + m.getIdM() + "abre la entrada 1. " + LocalDateTime.now();
                         break;
                     case 4:
-                        aEscribir = "El monitor" + m.id + "abre la entrada 2. " + LocalDateTime.now();
+                        aEscribir = "El monitor" + m.getIdM() + "abre la entrada 2. " + LocalDateTime.now();
                         break;
                     case 5:
-                        aEscribir = "El monitor" + m.id + "ha limpiado un plato. " + LocalDateTime.now();
+                        aEscribir = "El monitor" + m.getIdM() + "ha limpiado un plato. " + LocalDateTime.now();
                         break;
                     
                     default:

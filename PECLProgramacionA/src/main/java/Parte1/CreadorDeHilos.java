@@ -15,8 +15,8 @@ import java.util.concurrent.TimeUnit;
  */
 public class CreadorDeHilos extends Thread {
 
-    InterfazCampamento c;
-    Parar paro;
+    private InterfazCampamento c;
+    private Parar paro;
 
     //Constructor
     public CreadorDeHilos(InterfazCampamento c, Parar paro) {

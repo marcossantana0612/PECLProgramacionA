@@ -13,7 +13,7 @@ import java.util.Random;
  */
 public class Monitor extends Thread {
     //Declaración de variables
-    public String id;
+    private String id;
     private Campamento campamento;
     private Parar paro;
     private int actividad;
@@ -24,6 +24,10 @@ public class Monitor extends Thread {
         this.id = id;
         this.campamento = campamento;
         this.paro = paro;
+    }
+    //get de la variable 'id'
+    public String getIdM() {
+        return id;
     }
 
     @Override

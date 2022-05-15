@@ -16,7 +16,7 @@ import java.util.logging.Logger;
 
 public class Ninio extends Thread {
     //declaracion de variables
-    public String id;
+    private String id;
     private Campamento campamento;
     private Parar paro;
     private int contador = 0;
@@ -28,6 +28,11 @@ public class Ninio extends Thread {
         this.paro = paro;
 
     }
+    //get de la variable 'id'
+    public String getIdN() {
+        return id;
+    }
+    
     //get de la variable 'contador'
     public int getContador() {
         return contador;

@@ -23,8 +23,8 @@ import java.util.concurrent.locks.ReentrantLock;
  */
 public class Campamento {
 
-    InterfazCampamento interfaz;
-    Logs logs = new Logs();
+    private InterfazCampamento interfaz;
+    private Logs logs = new Logs();
 
     public Campamento(InterfazCampamento interfaz) {
         this.interfaz = interfaz;
@@ -58,34 +58,34 @@ public class Campamento {
     private boolean sogaLibre = true;
     private boolean ganador;
 
-    Random r = new Random();
+    private Random r = new Random();
 
     //Declaracion de Locks 
-    Lock lock = new ReentrantLock();
-    Lock entradas = new ReentrantLock();
-    Lock entradasM = new ReentrantLock();
-    Lock actiMeri = new ReentrantLock();
+    private Lock lock = new ReentrantLock();
+    private Lock entradas = new ReentrantLock();
+    private Lock entradasM = new ReentrantLock();
+    private Lock actiMeri = new ReentrantLock();
 
-    Condition e1 = entradas.newCondition();
-    Condition e2 = entradas.newCondition();
+    private Condition e1 = entradas.newCondition();
+    private Condition e2 = entradas.newCondition();
 
     //Declaracion de CiclicBarriers
-    final CyclicBarrier barreraTirolina = new CyclicBarrier(2);
-    final CyclicBarrier barreraSoga = new CyclicBarrier(10);
-    final CyclicBarrier barreraFinSoga = new CyclicBarrier(11);
+    private final CyclicBarrier barreraTirolina = new CyclicBarrier(2);
+    private final CyclicBarrier barreraSoga = new CyclicBarrier(10);
+    private final CyclicBarrier barreraFinSoga = new CyclicBarrier(11);
 
     //Declaracion de Semaforos
-    Semaphore semP1 = new Semaphore(0);
-    Semaphore semP2 = new Semaphore(0);
-    Semaphore semaforoTirolina = new Semaphore(0);
-    Semaphore entrarTirolina = new Semaphore(0);
-    Semaphore semaforoSoga = new Semaphore(0);
-    Semaphore esperarGrupo = new Semaphore(0);
-    Semaphore actiTiro = new Semaphore(1);
+    private Semaphore semP1 = new Semaphore(0);
+    private Semaphore semP2 = new Semaphore(0);
+    private Semaphore semaforoTirolina = new Semaphore(0);
+    private Semaphore entrarTirolina = new Semaphore(0);
+    private Semaphore semaforoSoga = new Semaphore(0);
+    private Semaphore esperarGrupo = new Semaphore(0);
+    private Semaphore actiTiro = new Semaphore(1);
 
-    Semaphore sucios = new Semaphore(25);
-    Semaphore limpios = new Semaphore(0);
-    Semaphore entrarMerienda = new Semaphore(20);
+    private Semaphore sucios = new Semaphore(25);
+    private Semaphore limpios = new Semaphore(0);
+    private Semaphore entrarMerienda = new Semaphore(20);
 
     public String obtenerIDsM(ArrayList<Monitor> array) {
         /*
@@ -95,7 +95,7 @@ public class Campamento {
         String IDs = "";
         if (!array.isEmpty()) {
             for (int i = 0; i < array.size(); i++) {
-                IDs = IDs + array.get(i).id + ", ";
+                IDs = IDs + array.get(i).getIdM() + ", ";
             }
         }
         lock.unlock();
@@ -110,7 +110,7 @@ public class Campamento {
         String IDs = "";
         if (!array.isEmpty()) {
             for (int i = 0; i < array.size(); i++) {
-                IDs = IDs + array.get(i).id + ", ";
+                IDs = IDs + array.get(i).getIdN() + ", ";
             }
         }
         lock.unlock();
@@ -318,24 +318,24 @@ public class Campamento {
             } else {
                 interfaz.actualizarColaTirolina("");   //actualizacion de la interfaz, el ninio sale de la cola 
             }
-            interfaz.actualizarPreparacion(ninio.id);  //actualizacion de la interfaz, poniendo al ninio en la celda de preparacion
+            interfaz.actualizarPreparacion(ninio.getIdN());  //actualizacion de la interfaz, poniendo al ninio en la celda de preparacion
 
             semaforoTirolina.acquire();
 
             interfaz.actualizarPreparacion("");        //actualizacion de la interfaz, el ninio ya se ha preparado
-            interfaz.actualizarTirolina(ninio.id);
+            interfaz.actualizarTirolina(ninio.getIdN());
 
             logs.guardarDatoN(ninio, 6);
             TimeUnit.SECONDS.sleep(3);
 
             interfaz.actualizarTirolina("");           //actualizacion de la interfaz, el ninio ya se ha preparado
-            interfaz.actualizarTirolina(ninio.id);
+            interfaz.actualizarTirolina(ninio.getIdN());
 
             logs.guardarDatoN(ninio, 6);               //Se registra en el log
             TimeUnit.SECONDS.sleep(3);                 //espera a que el ninio se tire por la tirolina
 
             interfaz.actualizarTirolina("");           //actualizacion de la interfaz, el ninio ya se ha tirado
-            interfaz.actualizarFinalizacion(ninio.id); //el ninio se esta bajando
+            interfaz.actualizarFinalizacion(ninio.getIdN()); //el ninio se esta bajando
 
             TimeUnit.MILLISECONDS.sleep(500);          //espera a que el ninio baje de la tirolina
 
